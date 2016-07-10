@@ -14,7 +14,7 @@ public class HttpSender extends Thread{
 	String command;
 	String strURL;
 	String res="";
-	static String ip="210.41.100.57";
+	static String ip="210.41.98.81:8086";
 	URL url=null;
 	HttpSender(String command){
 		this.command=command;

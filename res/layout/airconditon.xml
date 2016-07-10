@@ -1,0 +1,264 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="#ffffff"
+   >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal" 
+         android:background="#FFD569">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center|end"
+            android:text="26℃"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:textSize="60sp" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:src="@drawable/ic_stat_namecool" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+         <LinearLayout
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:orientation="vertical" >
+
+             <TextView
+                 android:id="@+id/textView1"
+                 android:layout_width="match_parent"
+                 android:layout_height="0dp"
+                 android:layout_marginBottom="5dp"
+                 android:layout_marginTop="5dp"
+                 android:layout_weight="1"
+                 android:text="开关"
+                 android:textColor="#708090"
+                 android:textSize="15sp" />
+
+             <Switch
+                 android:id="@+id/ac1_switch"
+                 android:layout_width="wrap_content"
+                 android:layout_height="0dp"
+                 android:layout_weight="4"
+                 android:gravity="top"
+                 android:textOff="关闭"
+                 android:textOn="开启" />
+
+         </LinearLayout>
+
+         <TextView
+             android:id="@+id/textView4"
+             android:layout_width="1dp"
+             android:layout_height="match_parent"
+             android:layout_weight="0"
+             android:background="#7A7A7A"
+             android:text="TextView" />
+
+"
+
+         <LinearLayout
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:orientation="vertical" >
+
+             <TextView
+                 android:id="@+id/textView5"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginBottom="5dp"
+                 android:layout_marginTop="5dp"
+                 android:layout_weight="1"
+                 android:text="模式"
+                 android:textColor="#708090"
+                 android:textSize="15sp" />
+
+             <RadioGroup
+                 android:id="@+id/ac_f_group"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="5"
+                 android:gravity="top"
+                 android:orientation="vertical" >
+
+                <RadioButton
+                    android:id="@+id/ac_f_auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="自动"
+                    android:textColor="#708090"
+                    android:textSize="10sp" />
+
+                <RadioButton
+                    android:id="@+id/ac_f_cold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="制冷"
+                    android:textColor="#708090"
+                    android:textSize="10sp" />
+
+                <RadioButton
+                    android:id="@+id/ac_f_hot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="制热"
+                    android:textColor="#708090"
+                    android:textSize="10sp" />
+
+            </RadioGroup>
+         </LinearLayout>
+         </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#7A7A7A" />
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="0dp"
+             android:layout_weight="1"
+             android:orientation="horizontal" >
+
+         <LinearLayout
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:orientation="vertical" >
+
+             <TextView
+                 android:id="@+id/textView7"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:text="温度"
+                 android:textColor="#708090"
+                 android:textSize="15sp" />
+
+             <SeekBar
+                 android:id="@+id/ac1_seekBar"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:max="13"
+                 android:progress="10" />
+
+         </LinearLayout>
+
+         <TextView
+             android:id="@+id/TextView01"
+             android:layout_width="1dp"
+             android:layout_height="match_parent"
+             android:layout_weight="0"
+             android:background="#7A7A7A"
+             android:text="TextView" />
+
+             <LinearLayout
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:orientation="vertical" >
+
+                 <TextView
+                     android:id="@+id/textView6"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginBottom="5dp"
+                     android:layout_marginTop="5dp"
+                     android:layout_weight="1"
+                     android:text="定时"
+                     android:textColor="#708090"
+                     android:textSize="15sp" />
+
+                 <RadioGroup
+                     android:id="@+id/ac2_td_group"
+                     android:layout_width="match_parent"
+                     android:layout_height="0dp"
+                     android:layout_weight="6"
+                     android:orientation="vertical" >
+
+                <RadioButton
+                    android:id="@+id/ac_td_cancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:text="取消"
+                    android:textColor="#708090"
+                    android:textSize="10sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/ac2_td_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="1小时"
+                        android:textColor="#708090"
+                        android:textSize="10sp" />
+                    <RadioButton
+                        android:id="@+id/ac2_td_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="2小时"
+                        android:textColor="#708090"
+                        android:textSize="10sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/ac2_td_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="3小时"
+                    android:textColor="#708090"
+                    android:textSize="10sp" />
+
+                <RadioButton
+                    android:id="@+id/ac2_td_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="4小时"
+                    android:textColor="#708090"
+                    android:textSize="10sp" />
+                    </LinearLayout>
+                
+            </RadioGroup>
+             </LinearLayout>
+             </LinearLayout>
+               
+   
+   
+   </LinearLayout>

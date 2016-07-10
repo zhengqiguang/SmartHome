@@ -1,0 +1,182 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="#ffffff"
+   >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal" 
+         android:background="#FFD569">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="#788EA3"
+            android:gravity="center"
+            android:text="灯光控制"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+         <LinearLayout
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:orientation="vertical" >
+
+             <TextView
+                 android:id="@+id/textView1"
+                 android:layout_width="match_parent"
+                 android:layout_height="0dp"
+                 android:layout_marginBottom="5dp"
+                 android:layout_marginTop="5dp"
+                 android:layout_weight="1"
+                 android:text="客厅灯光"
+                 android:textColor="#708090"
+                 android:textSize="15sp" />
+
+             <Switch
+                 android:id="@+id/l1_switch"
+                 android:layout_width="wrap_content"
+                 android:layout_height="0dp"
+                 android:layout_weight="4"
+                 android:gravity="top"
+                 android:textOff="关闭"
+                 android:textOn="开启" />
+
+         </LinearLayout>
+
+         <TextView
+             android:id="@+id/textView4"
+             android:layout_width="1dp"
+             android:layout_height="match_parent"
+             android:layout_weight="0"
+             android:background="#D9D9D9"
+             android:padding="1dp"
+             android:text="TextView" />
+
+         <LinearLayout
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:orientation="vertical" >
+
+             <TextView
+                 android:id="@+id/textView2"
+                 android:layout_width="match_parent"
+                 android:layout_height="0dp"
+                 android:layout_marginBottom="5dp"
+                 android:layout_marginTop="5dp"
+                 android:layout_weight="1"
+                 android:text="卧室灯光"
+                 android:textColor="#708090"
+                 android:textSize="15sp" />
+
+             <Switch
+                 android:id="@+id/l2_switch"
+                 android:layout_width="wrap_content"
+                 android:layout_height="0dp"
+                 android:layout_weight="4"
+                 android:gravity="top"
+                 android:textOff="关闭"
+                 android:textOn="开启" />
+         </LinearLayout>
+         </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D9D9D9"
+        android:padding="1dp" />
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="0dp"
+             android:layout_weight="1"
+             android:orientation="horizontal" >
+
+         <LinearLayout
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:orientation="vertical" >
+
+             <TextView
+                 android:id="@+id/textView12"
+                 android:layout_width="match_parent"
+                 android:layout_height="0dp"
+                 android:layout_marginBottom="5dp"
+                 android:layout_marginTop="5dp"
+                 android:layout_weight="1"
+                 android:text="卫生间灯光"
+                 android:textColor="#708090"
+                 android:textSize="15sp" />
+
+             <Switch
+                 android:id="@+id/l3_switch"
+                 android:layout_width="wrap_content"
+                 android:layout_height="0dp"
+                 android:layout_weight="4"
+                 android:gravity="top"
+                 android:textOff="关闭"
+                 android:textOn="开启" />
+
+         </LinearLayout>
+
+         <TextView
+             android:id="@+id/TextView01"
+             android:layout_width="1dp"
+             android:layout_height="match_parent"
+             android:layout_weight="0"
+             android:background="#D9D9D9"
+             android:padding="1dp"
+             android:text="TextView" />
+
+             <LinearLayout
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:orientation="vertical" >
+
+                 <TextView
+                 android:id="@+id/textView13"
+                 android:layout_width="match_parent"
+                 android:layout_height="0dp"
+                 android:layout_marginBottom="5dp"
+                 android:layout_marginTop="5dp"
+                 android:layout_weight="1"
+                 android:text="全部"
+                 android:textColor="#708090"
+                 android:textSize="15sp" />
+
+             <Switch
+                 android:id="@+id/lall_switch"
+                 android:layout_width="wrap_content"
+                 android:layout_height="0dp"
+                 android:layout_weight="4"
+                 android:gravity="top"
+                 android:textOff="关闭"
+                 android:textOn="开启" />
+             </LinearLayout>
+             </LinearLayout>
+               
+   
+   
+   </LinearLayout>
+
+

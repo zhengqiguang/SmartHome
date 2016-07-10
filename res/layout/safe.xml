@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#ffffff" >
+
+     <TextView
+     android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/safe_1"
+        android:textColor="#708090"
+        android:textSize="25sp"   
+        android:layout_marginTop="5dp"
+android:layout_marginBottom="5dp"   />
+
+    
+
+   <EditText
+       android:id="@+id/edit_ip"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:ems="10" 
+       android:layout_marginBottom="27dp"/>
+    <Button
+       android:id="@+id/change_ip"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="修改IP" 
+        android:layout_marginBottom="30dp"/>
+     <TextView
+         android:id="@+id/textView2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/safe_door_station"
+         android:textColor="#708090"
+         android:textSize="15sp" 
+         android:layout_marginTop="5dp"
+ android:layout_marginBottom="33dp"/>
+  <TextView
+        android:id="@+id/s1_Door"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="当前状态：关闭"
+        android:textSize="10sp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#708090"
+         android:layout_marginBottom="35dp" />
+     
+    
+         
+          <TextView
+         android:id="@+id/textView3"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/safe_gas1"
+         android:textColor="#708090"
+         android:textSize="15sp"
+         android:layout_marginTop="5dp"
+ android:layout_marginBottom="38dp" />
+      <TextView
+        android:id="@+id/S2_Alarm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="当前状态：正常"
+        android:textSize="10sp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#708090"
+         android:layout_marginBottom="41dp" />
+     
+</LinearLayout>

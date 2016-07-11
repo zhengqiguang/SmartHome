@@ -70,14 +70,14 @@ public final class R {
         public static final int button3=0x7f080003;
         public static final int button4=0x7f080002;
         public static final int button5=0x7f080004;
-        public static final int change_ip=0x7f08001f;
-        public static final int edit_ip=0x7f08001e;
+        public static final int change_ip=0x7f08001e;
+        public static final int edit_ip=0x7f08001d;
         public static final int imageView1=0x7f080006;
         public static final int l1_switch=0x7f080015;
         public static final int l2_switch=0x7f080016;
         public static final int l3_switch=0x7f080019;
         public static final int lall_switch=0x7f08001b;
-        public static final int list_view=0x7f08001d;
+        public static final int list_view=0x7f08001f;
         public static final int sensor_data=0x7f080022;
         public static final int sensor_icon=0x7f080020;
         public static final int sensor_name=0x7f080021;

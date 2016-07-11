@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.View.OnLongClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
@@ -27,6 +28,7 @@ public class SafeActivity extends Activity
   private List<Sensor> sensor_list = new ArrayList<Sensor>();
   SensorAdapter adapter=null;
   ListView listview =null;
+  EditText edit_ip=null;
   
   public void onCreate(Bundle savedInstanceState) 
   { 
@@ -127,10 +129,23 @@ public class SafeActivity extends Activity
     });
     
     
+    TextView v = (TextView)findViewById(R.id.textView1);
+    v.setOnLongClickListener(new OnLongClickListener(){
+
+		@Override
+		public boolean onLongClick(View v) {
+			// TODO Auto-generated method stub
+			change_ip.setVisibility(0);
+			edit_ip.setVisibility(0);
+			return false;
+		}
+    	
+    });
+    
     
     //ÐÞ¸ÄÄ¿±êIP
     change_ip=(Button)findViewById(R.id.change_ip);
-    final EditText edit_ip = (EditText)findViewById(R.id.edit_ip);   
+    edit_ip = (EditText)findViewById(R.id.edit_ip);   
     change_ip.setOnClickListener(new OnClickListener(){
 		@Override
 		public void onClick(View v) {

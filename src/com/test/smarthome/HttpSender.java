@@ -6,6 +6,8 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -14,7 +16,7 @@ public class HttpSender extends Thread{
 	String command;
 	String strURL;
 	String res="";
-	static String ip="192.168.4.1:80";
+	static String ip="192.168.137.42:80";
 	URL url=null;
 	HttpSender(String command){
 		this.command=command;
@@ -35,7 +37,7 @@ public class HttpSender extends Thread{
 		try {
 			urlConn = (HttpURLConnection)url.openConnection();
 		
-		InputStreamReader  in = new InputStreamReader(urlConn.getInputStream());
+		InputStreamReader in = new InputStreamReader(urlConn.getInputStream());
 		BufferedReader bufferReader = new BufferedReader(in);
 		String result = bufferReader.readLine();
 		res = result;
@@ -58,6 +60,14 @@ public class HttpSender extends Thread{
 			sleep(10);
 		}
 		
+		
+	}
+	
+	static String sendCommand(String command, TextView view) throws InterruptedException{
+		HttpSender a=new HttpSender(command);
+		a.start();
+		view.setText(a.res);
+		return a.res;
 		
 	}
 }

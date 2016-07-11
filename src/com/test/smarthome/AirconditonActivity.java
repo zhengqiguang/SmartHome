@@ -23,9 +23,9 @@ public class AirconditonActivity extends Activity implements OnSeekBarChangeList
   public SeekBar seekBar1; 
   TextView tmp_text = null;
   TextView tmp_text_t = null;
-  int tmp=26;
-  String mode = "c";
-  int time = 0;
+  static public int tmp=26;
+  static public String mode = "c";
+  static public int time = 0;
   
   public void onCreate(Bundle savedInstanceState) 
   { 

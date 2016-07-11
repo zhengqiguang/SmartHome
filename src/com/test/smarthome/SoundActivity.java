@@ -171,8 +171,8 @@ public class SoundActivity extends Activity implements OnClickListener{
 			showTip(com);
 			
 			command_measure(com);
-			ImageButton voice_command_button=(ImageButton)findViewById(R.id.voice_command_button);
-			((ImageButton)voice_command_button).setImageDrawable(getResources().getDrawable(R.drawable.mic));
+		//	ImageButton voice_command_button=(ImageButton)findViewById(R.id.voice_command_button);
+	//		((ImageButton)voice_command_button).setImageDrawable(getResources().getDrawable(R.drawable.mic));
 			/*
 			if (null != result){
 				if(com.equals("打开客厅灯"))
@@ -270,46 +270,44 @@ public class SoundActivity extends Activity implements OnClickListener{
     
     public boolean command_measure(String command){
     	try {
-    		if(command.equals("打开客厅灯"))
-    		{		HttpSender.sendCommand("L1/ON"); showTip(command + " 指令已发送!");}
-    		else if(command.equals("关闭客厅灯"))
-    		{	HttpSender.sendCommand("L1/OFF"); showTip(command + " 指令已发送!");}
-    		else if(command.equals("打开卫生间灯"))
-    		{	HttpSender.sendCommand("L3/ON"); showTip(command + " 指令已发送!");}
-    		else if(command.equals("关闭卫生间灯"))
-    		{	HttpSender.sendCommand("L3/OFF"); showTip(command + " 指令已发送!");}
-    		else if(command.equals("打开卧室灯"))
-    		{	HttpSender.sendCommand("L2/ON"); showTip(command + " 指令已发送!");}
-    		else if(command.equals("关闭卧室灯"))
-    		{	HttpSender.sendCommand("L2/OFF"); showTip(command + " 指令已发送!");}
-    		else if(command.equals("打开卧室空调"))
-    		{	HttpSender.sendCommand("AC2/ON"); showTip(command + " 指令已发送!");}
-    		else if(command.equals("关闭卧室空调"))
-    		{	HttpSender.sendCommand("AC2/OFF"); showTip(command + " 指令已发送!");}
-    		else if(command.equals("打开客厅空调"))
-    		{	HttpSender.sendCommand("AC1/ON"); showTip(command + " 指令已发送!");}
-    		else if(command.equals("关闭客厅空调"))
-    		{	HttpSender.sendCommand("AC1/OFF"); showTip(command + " 指令已发送!");}
-    		else if(command.equals("卧室空调一小时后开启"))
-    		{	HttpSender.sendCommand("TD/0"); showTip(command + " 指令已发送!");}
-    		else if(command.equals("卧室空调一小时后关闭"))
-    		{	HttpSender.sendCommand("TD/1"); showTip(command + " 指令已发送!");}
+    		if(command.equals("打开客厅的灯"))
+    		{		HttpSender.sendCommand("RR0/SON/"); showTip(command + " 指令已发送!");}
+    		else if(command.equals("关闭客厅的灯"))
+    		{	HttpSender.sendCommand("RR0/SOF/"); showTip(command + " 指令已发送!");}
+    		else if(command.equals("打开卫生间的灯"))
+    		{	HttpSender.sendCommand("RR2/SON/"); showTip(command + " 指令已发送!");}
+    		else if(command.equals("关闭卫生间的灯"))
+    		{	HttpSender.sendCommand("RR2/SOF/"); showTip(command + " 指令已发送!");}
+    		else if(command.equals("打开灯"))
+    		{	HttpSender.sendCommand("RR3/SON/"); showTip(command + " 指令已发送!");}
+    		else if(command.equals("关闭灯"))
+    		{	HttpSender.sendCommand("RR3/SOF/"); showTip(command + " 指令已发送!");}
+    		else if(command.equals("打开卧室的灯"))
+    		{	HttpSender.sendCommand("RR1/SON/"); showTip(command + " 指令已发送!");}
+    		else if(command.equals("关闭卧室的灯"))
+    		{	HttpSender.sendCommand("RR1/SOF/"); showTip(command + " 指令已发送!");}
+    		else if(command.equals("打开空调"))
+    		{	HttpSender.sendCommand("AC0/SST/?temp=" + String.valueOf(26) + "&mode=" + "c" + "&time=" + 0); showTip(command + " 指令已发送!");}
+    		else if(command.equals("关闭空调"))
+    		{	HttpSender.sendCommand("AC0/SOF/"); showTip(command + " 指令已发送!");}
+    		else if(command.equals("一小时后关闭空调"))
+    		{	HttpSender.sendCommand("AC0/SST/?temp=" + String.valueOf(26) + "&mode=" + "c" + "&time=" + 0); showTip(command + " 指令已发送!");}
     		else if(command.equals("打开电视"))
-    		{	HttpSender.sendCommand("TV1/ON"); showTip(command + " 指令已发送!");}
+    		{	HttpSender.sendCommand("TV0/SON/"); showTip(command + " 指令已发送!");}
     		else if(command.equals("关闭电视"))
-    		{	HttpSender.sendCommand("TV/OFF"); showTip(command + " 指令已发送!");}
-    		else if(command.equals("电视频道加"))
-    		{	HttpSender.sendCommand("TVC/UP"); showTip(command + " 指令已发送!");}
-    		else if(command.equals("电视频道减"))
-    		{	HttpSender.sendCommand("TVC/DOWN"); showTip(command + " 指令已发送!");}
-    		else if(command.equals("电视音量加"))
-    		{	HttpSender.sendCommand("TVS/UP"); showTip(command + " 指令已发送!");}
-    		else if(command.equals("电视音量减"))
-    		{	HttpSender.sendCommand("TVS/DOWN"); showTip(command + " 指令已发送!");}
-    		else if(command.equals("空调温度加"))
-    		{	HttpSender.sendCommand("TMP/UP"); showTip(command + " 指令已发送!");}
-    		else if(command.equals("空调温度减"))
-    		{	HttpSender.sendCommand("TMP/DOWN"); showTip(command + " 指令已发送!");}
+    		{	HttpSender.sendCommand("TV0/SOF/"); showTip(command + " 指令已发送!");}
+    		else if(command.equals("往后改台"))
+    		{	HttpSender.sendCommand("STP/-1"); showTip(command + " 指令已发送!");}
+    		else if(command.equals("往前改台"))
+    		{	HttpSender.sendCommand("STP/-2"); showTip(command + " 指令已发送!");}
+    		else if(command.equals("调大声音"))
+    		{	HttpSender.sendCommand("STV/-1"); showTip(command + " 指令已发送!");}
+    		else if(command.equals("调小声音"))
+    		{	HttpSender.sendCommand("STV/-2"); showTip(command + " 指令已发送!");}
+    		else if(command.equals("调高温度"))
+    		{	HttpSender.sendCommand("AC0/SST/?temp=" + String.valueOf(++AirconditonActivity.tmp) + "&mode=" + AirconditonActivity.mode + "&time=" + AirconditonActivity.time); showTip(command + " 指令已发送!");}
+    		else if(command.equals("调低温度"))
+    		{	HttpSender.sendCommand("AC0/SST/?temp=" + String.valueOf(--AirconditonActivity.tmp) + "&mode=" + AirconditonActivity.mode + "&time=" + AirconditonActivity.time); showTip(command + " 指令已发送!");}
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

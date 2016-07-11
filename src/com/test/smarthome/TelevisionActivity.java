@@ -29,6 +29,7 @@ public class TelevisionActivity extends Activity implements OnSeekBarChangeListe
   int channel=1;
   EditText input_text = null;
   
+  boolean is_tv_on = false;
   
   public void onCreate(Bundle savedInstanceState) 
   { 
@@ -51,7 +52,7 @@ public class TelevisionActivity extends Activity implements OnSeekBarChangeListe
 	}
 	*/
   //µÁ ”TV1
-    final boolean is_tv_on = false;
+    
     final Button tv1 = (Button)this.findViewById(R.id.button1);
     tv1.setOnClickListener(new OnClickListener(){
 
@@ -64,12 +65,14 @@ public class TelevisionActivity extends Activity implements OnSeekBarChangeListe
 						HttpSender.sendCommand("TV0/SOF/");
 						Toast.makeText(TelevisionActivity.this, "tv on", Toast.LENGTH_SHORT).show();
 						tv1.setTextColor(Color.BLACK);
+						is_tv_on=false;
 					}
 					else
 					{
 						HttpSender.sendCommand("TV0/SON/");
 						Toast.makeText(TelevisionActivity.this, "tv off", Toast.LENGTH_SHORT).show();
 						tv1.setTextColor(Color.RED);
+						is_tv_on=true;
 					}
 					} catch (InterruptedException e) {
 						// TODO Auto-generated catch block

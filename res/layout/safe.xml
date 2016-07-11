@@ -23,6 +23,26 @@
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:text="刷新" />
+
+     <EditText
+         android:id="@+id/edit_ip"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginBottom="27dp"
+         android:layout_weight="1"
+         android:ems="10"
+         android:visibility="gone" >
+
+         <requestFocus />
+     </EditText>
+
+     <Button
+         android:id="@+id/change_ip"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginBottom="30dp"
+         android:text="修改IP"
+         android:visibility="gone" />
      
      </LinearLayout>
     <ListView
@@ -31,20 +51,5 @@
         android:layout_height="wrap_content" >
         
     </ListView>
-
-     
-     
-   <EditText
-       android:id="@+id/edit_ip"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:ems="10" 
-       android:layout_marginBottom="27dp"/>
-    <Button
-       android:id="@+id/change_ip"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="修改IP" 
-        android:layout_marginBottom="30dp"/>
      
 </LinearLayout>

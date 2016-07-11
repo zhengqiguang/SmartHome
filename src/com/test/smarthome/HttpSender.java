@@ -14,7 +14,7 @@ public class HttpSender extends Thread{
 	String command;
 	String strURL;
 	String res="";
-	static String ip="210.41.98.81:8086";
+	static String ip="192.168.4.1:80";
 	URL url=null;
 	HttpSender(String command){
 		this.command=command;
@@ -54,7 +54,7 @@ public class HttpSender extends Thread{
 		a.start();
 		int wait=0;
 		while(true){
-			if(a.flag==true || wait++ > 100)return a.res;
+			if(a.flag==true || wait++ > 500)return a.res;
 			sleep(10);
 		}
 		

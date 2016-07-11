@@ -183,79 +183,25 @@
                  android:layout_width="0dp"
                  android:layout_height="wrap_content"
                  android:layout_weight="1"
-                 android:orientation="vertical" >
+                 android:orientation="horizontal" >
 
                  <TextView
                      android:id="@+id/textView6"
-                     android:layout_width="match_parent"
+                     android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
                      android:layout_marginBottom="5dp"
                      android:layout_marginTop="5dp"
-                     android:layout_weight="1"
-                     android:text="定时"
+                     android:text="定时:"
                      android:textColor="#708090"
                      android:textSize="15sp" />
 
-                 <RadioGroup
-                     android:id="@+id/ac2_td_group"
-                     android:layout_width="match_parent"
-                     android:layout_height="0dp"
-                     android:layout_weight="6"
-                     android:orientation="vertical" >
+                 <Button
+                     android:id="@+id/ac_td_button"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:background="#FFFFFF"
+                     android:text="无" />
 
-                <RadioButton
-                    android:id="@+id/ac_td_cancel"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_gravity="left"
-                    android:layout_weight="1"
-                    android:text="取消"
-                    android:textColor="#708090"
-                    android:textSize="10sp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal" >
-
-                    <RadioButton
-                        android:id="@+id/ac2_td_1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="1小时"
-                        android:textColor="#708090"
-                        android:textSize="10sp" />
-                    <RadioButton
-                        android:id="@+id/ac2_td_2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="2小时"
-                        android:textColor="#708090"
-                        android:textSize="10sp" />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal" >
-
-                <RadioButton
-                    android:id="@+id/ac2_td_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="3小时"
-                    android:textColor="#708090"
-                    android:textSize="10sp" />
-
-                <RadioButton
-                    android:id="@+id/ac2_td_4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="4小时"
-                    android:textColor="#708090"
-                    android:textSize="10sp" />
-                    </LinearLayout>
-                
-            </RadioGroup>
              </LinearLayout>
              </LinearLayout>
                

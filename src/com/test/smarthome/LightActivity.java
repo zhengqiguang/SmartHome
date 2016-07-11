@@ -43,14 +43,14 @@ public class LightActivity extends Activity
             // TODO Auto-generated method stub  
             if (isChecked) { 
             	try {
-					HttpSender.sendCommand("AC0/SON");
+					HttpSender.sendCommand("RR0/SON");
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}//打开ac1
             } else {  
             	try {
-					HttpSender.sendCommand("AC0/SOF");
+					HttpSender.sendCommand("RR0/SOF");
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -67,14 +67,14 @@ public class LightActivity extends Activity
             // TODO Auto-generated method stub  
             if (isChecked) { 
             	try {
-					HttpSender.sendCommand("AC0/SON");
+					HttpSender.sendCommand("RR1/SON");
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}//打开ac1
             } else {  
             	try {
-					HttpSender.sendCommand("AC0/SOF");
+					HttpSender.sendCommand("RR1/SOF");
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -92,14 +92,14 @@ public class LightActivity extends Activity
             // TODO Auto-generated method stub  
             if (isChecked) { 
             	try {
-					HttpSender.sendCommand("AC0/SON");
+					HttpSender.sendCommand("RR2/SON");
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}//打开ac1
             } else {  
             	try {
-					HttpSender.sendCommand("AC0/SOF");
+					HttpSender.sendCommand("RR2/SOF");
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -110,7 +110,7 @@ public class LightActivity extends Activity
     
     
     
-    //全部
+    //l3
     l4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {   
         @Override  
         public void onCheckedChanged(CompoundButton buttonView,  
@@ -118,14 +118,14 @@ public class LightActivity extends Activity
             // TODO Auto-generated method stub  
             if (isChecked) { 
             	try {
-					HttpSender.sendCommand("AC0/SON");
+					HttpSender.sendCommand("RR3/SON");
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}//打开ac1
             } else {  
             	try {
-					HttpSender.sendCommand("AC0/SOF");
+					HttpSender.sendCommand("RR3/SOF");
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

@@ -160,7 +160,7 @@
                  android:layout_marginBottom="5dp"
                  android:layout_marginTop="5dp"
                  android:layout_weight="1"
-                 android:text="全部"
+                 android:text="L3"
                  android:textColor="#708090"
                  android:textSize="15sp" />
 

@@ -61,13 +61,13 @@ public class TelevisionActivity extends Activity implements OnSeekBarChangeListe
 				try {
 					if(is_tv_on)
 					{
-						HttpSender.sendCommand("AC0/SOF");
+						HttpSender.sendCommand("TV0/SOF/");
 						Toast.makeText(TelevisionActivity.this, "tv on", Toast.LENGTH_SHORT).show();
 						tv1.setTextColor(Color.BLACK);
 					}
 					else
 					{
-						HttpSender.sendCommand("AC0/SON");
+						HttpSender.sendCommand("TV0/SON/");
 						Toast.makeText(TelevisionActivity.this, "tv off", Toast.LENGTH_SHORT).show();
 						tv1.setTextColor(Color.RED);
 					}
@@ -115,7 +115,7 @@ public class TelevisionActivity extends Activity implements OnSeekBarChangeListe
 			// TODO Auto-generated method stub
 			channel = Integer.valueOf(input_text.getText().toString());
 			try {
-				HttpSender.sendCommand("STP/-2");
+				HttpSender.sendCommand("STP/" + channel);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

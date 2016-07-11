@@ -42,7 +42,7 @@ public class AirconditonActivity extends Activity implements OnSeekBarChangeList
     
     
     //空调开关
-    Switch ac1 = (Switch)this.findViewById(R.id.ac1_switch);
+    final Switch ac1 = (Switch)this.findViewById(R.id.ac1_switch);
     ac1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {   
         @Override  
         public void onCheckedChanged(CompoundButton buttonView,  
@@ -50,14 +50,16 @@ public class AirconditonActivity extends Activity implements OnSeekBarChangeList
             // TODO Auto-generated method stub  
             if (isChecked) { 
             	try {
-					HttpSender.sendCommand("AC0/SON");
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}//打开ac1
+    				HttpSender.sendCommand(
+    						"AC0/SST/?temp=" + String.valueOf(tmp) + "&mode=" + mode + "&time=" + time
+    						);
+    			} catch (InterruptedException e) {
+    				// TODO Auto-generated catch block
+    				e.printStackTrace();
+    			}
             } else {  
             	try {
-					HttpSender.sendCommand("AC0/SOF");
+					HttpSender.sendCommand("AC0/SOF/");
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -102,6 +104,42 @@ public class AirconditonActivity extends Activity implements OnSeekBarChangeList
     });
     */
     
+    final Button ac_td_button = (Button)findViewById(R.id.ac_td_button);
+    ac_td_button.setOnClickListener(new OnClickListener(){
+
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			switch(time){
+			case 0:
+			case 1:
+			case 2:
+			case 3:
+				time++;
+				break;
+			case 4:
+				time=0;
+				break;
+			}
+			if(time==0)
+				ac_td_button.setText("无");
+			else
+				ac_td_button.setText(time + "小时后关机");
+			try {
+				HttpSender.sendCommand(
+						"AC0/SST/?temp=" + String.valueOf(tmp) + "&mode=" + mode + "&time=" + time
+						);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			ac1.setChecked(true);
+			Toast.makeText(AirconditonActivity.this, "AC0/SST/?temp=" + String.valueOf(tmp) + "&mode=" + mode + "&time=" + time, Toast.LENGTH_SHORT).show();
+		}
+    	
+    });
+    
+    /*
     
   //卧室空调定时AC2
     RadioGroup group3 = (RadioGroup)this.findViewById(R.id.ac2_td_group);
@@ -120,6 +158,8 @@ public class AirconditonActivity extends Activity implements OnSeekBarChangeList
     				// TODO Auto-generated catch block
     				e.printStackTrace();
     			}
+    			ac1.setChecked(true);
+    			Toast.makeText(AirconditonActivity.this, "AC0/SST/?temp=" + String.valueOf(tmp) + "&mode=" + mode + "&time=" + time, Toast.LENGTH_SHORT).show();
     			break;
     		case R.id.ac2_td_1:
     			//定时1小时关
@@ -132,6 +172,8 @@ public class AirconditonActivity extends Activity implements OnSeekBarChangeList
     				// TODO Auto-generated catch block
     				e.printStackTrace();
     			}
+    			ac1.setChecked(true);
+    			Toast.makeText(AirconditonActivity.this, "AC0/SST/?temp=" + String.valueOf(tmp) + "&mode=" + mode + "&time=" + time, Toast.LENGTH_SHORT).show();
     			break;
     		case R.id.ac2_td_2:
     			//定时2小时关
@@ -144,6 +186,8 @@ public class AirconditonActivity extends Activity implements OnSeekBarChangeList
     				// TODO Auto-generated catch block
     				e.printStackTrace();
     			}
+    			ac1.setChecked(true);
+    			Toast.makeText(AirconditonActivity.this, "AC0/SST/?temp=" + String.valueOf(tmp) + "&mode=" + mode + "&time=" + time, Toast.LENGTH_SHORT).show();
     			break;
     		case R.id.ac2_td_3:
     			//定时3小时关
@@ -156,6 +200,8 @@ public class AirconditonActivity extends Activity implements OnSeekBarChangeList
     				// TODO Auto-generated catch block
     				e.printStackTrace();
     			}
+    			ac1.setChecked(true);
+    			Toast.makeText(AirconditonActivity.this, "AC0/SST/?temp=" + String.valueOf(tmp) + "&mode=" + mode + "&time=" + time, Toast.LENGTH_SHORT).show();
     			break;
     		case R.id.ac2_td_4:
     			//定时4小时关
@@ -168,11 +214,13 @@ public class AirconditonActivity extends Activity implements OnSeekBarChangeList
     				// TODO Auto-generated catch block
     				e.printStackTrace();
     			}
+    			ac1.setChecked(true);
+    			Toast.makeText(AirconditonActivity.this, "AC0/SST/?temp=" + String.valueOf(tmp) + "&mode=" + mode + "&time=" + time, Toast.LENGTH_SHORT).show();
     			break;
     		}
     	}
     });
-    
+    */
     RadioGroup modegroup = (RadioGroup)this.findViewById(R.id.ac_f_group);
     modegroup.setOnCheckedChangeListener(new OnCheckedChangeListener(){
 
@@ -193,8 +241,6 @@ public class AirconditonActivity extends Activity implements OnSeekBarChangeList
 				mode="h";
 				break;
 			}
-			
-
 			try {
 				HttpSender.sendCommand(
 						"AC0/SST/?temp=" + String.valueOf(tmp) + "&mode=" + mode + "&time=" + time
@@ -203,10 +249,9 @@ public class AirconditonActivity extends Activity implements OnSeekBarChangeList
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-						
-			Toast.makeText(AirconditonActivity.this, "AC0/SST/?temp=" + String.valueOf(tmp) + "&mode=" + mode, Toast.LENGTH_SHORT).show();
+			ac1.setChecked(true);		
+			Toast.makeText(AirconditonActivity.this, "AC0/SST/?temp=" + String.valueOf(tmp) + "&mode=" + mode + "&time=" + time, Toast.LENGTH_SHORT).show();
 		}
-    	
     });
     
     
